@@ -11,7 +11,7 @@
 	<key>keyEquivalent</key>
 	<string>^~J</string>
 	<key>name</key>
-	<string>JSFL</string>
+	<string>JavaScript (Flash)</string>
 	<key>patterns</key>
 	<array>
 		<dict>
