@@ -14,9 +14,9 @@ require SUPPORT + '/lib/ui'
 
 if File.exist?(FL_HELPTOC)
 	
-	flash_lang_intro = "<a href=\"tm-file://#{FL_HELPDIR}00003797.html\" title=\"Extending Flash Reference - Introduction\">Introduction to Extending Flash</a><br>"
-	flash_lang_methods = "<a href=\"tm-file://#{FL_HELPDIR}00003813.html\" title=\"Extending Flash Reference - Top Level Functions and Methods\">Top Level Functions and Methods</a><br>"
-	flash_lang_objects = "<a href=\"tm-file://#{FL_HELPDIR}00003831.html\" title=\"Extending Flash Reference - Objects\">Object List</a><br>" 
+	flash_lang_intro = "<a href=\"file://#{FL_HELPDIR}00003797.html\" title=\"Extending Flash Reference - Introduction\">Introduction to Extending Flash</a><br>"
+	flash_lang_methods = "<a href=\"file://#{FL_HELPDIR}00003813.html\" title=\"Extending Flash Reference - Top Level Functions and Methods\">Top Level Functions and Methods</a><br>"
+	flash_lang_objects = "<a href=\"file://#{FL_HELPDIR}00003831.html\" title=\"Extending Flash Reference - Objects\">Object List</a><br>" 
 
 end
 
@@ -60,7 +60,7 @@ if File.exist?( FL_HELPTOC )
             xml_line = REXML::Document.new(line)
             help_path = xml_line.root.attributes['href']
             help_class = xml_line.root.attributes['name']
-            collected_results << "<li><a href=\"tm-file://#{FL_HELPDIR}#{help_path}\">#{help_class}</a></li>"
+            collected_results << "<li><a href=\"file://#{FL_HELPDIR}#{help_path}\">#{help_class}</a></li>"
         end
 		
 		collected_results = collected_results.uniq
